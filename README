@@ -1,0 +1,43 @@
+# Synthetic City Data Generator with Bayesian Network Simulation
+
+## Overview
+This project provides a Python script to generate synthetic data representing a city with various types of objects, including houses, mountains, highways, tall buildings, schools, parks, and factories. The synthetic data can be used for simulating a Bayesian network to study the impact of a seismic event on the city.
+
+## Object Types
+- **House**: Residential building with details such as the number of rooms, presence of a garden, and garage.
+- **Mountain**: Elevated land with no population.
+- **Highway**: Transportation infrastructure with no population.
+- **Tall Building**: High-rise building with details like the number of floors and presence of an elevator.
+- **School**: Educational institution with details such as the number of classrooms and presence of a playground.
+- **Park**: Recreational area with no population.
+- **Factory**: Industrial building with details like production capacity and presence of a smokestack.
+
+## Attributes
+Each object in the city has the following attributes:
+- **Type**: Type of the object (e.g., House, Mountain, Highway).
+- **Material**: Material of the building (e.g., Concrete, Wood).
+- **Population**: Number of people living in the building.
+- **Age of Building**: Age of the building in years.
+- **Maintenance Factor**: Maintenance factor of the building.
+- **Ground Type**: Type of ground the object is located on.
+- Additional attributes specific to certain object types.
+
+## Bayesian Network Simulation
+To simulate a Bayesian network study on the synthetic city data:
+1. Define the Bayesian network structure based on the relationships between different attributes.
+2. Use the generated city data as evidence for the Bayesian network simulation.
+3. Analyze the network to understand the impact of a seismic event on different types of buildings and areas within the city.
+
+## Usage
+1. Clone this repository to your local machine.
+2. Ensure you have Python installed.
+3. Run the script `city_generator.py` to generate synthetic city data:
+    ```bash
+    python city_generator.py
+    ```
+4. Use the generated data in a Bayesian network simulation script.
+
+Feel free to customize the script, attributes, and Bayesian network simulation based on your specific simulation requirements.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
