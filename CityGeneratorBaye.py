@@ -80,12 +80,33 @@ class CityGeneratorBaye:
     def save_to_json(self):
         # Save city information to structure.json
         structure_data = {
+            {
             "variables": {
-                # Modify this based on your generated city structure
+                "Object": ["House", "Mountain", "Highway", "Tall Building", "School", "Park", "Factory"],
+                "Material": ["Concrete", "Wood", "Brick"],
+                "GroundType": ["Plain", "Hill", "River"],
+                "Population": ["Low", "Medium", "High"],
+                
+                "MaintenanceFactor": ["Low", "Medium", "High"],
+                "stories": ["1", "2", "3", "4", "5"],
+                "": ["True", "False"],
+                "": ["True", "False"],
+                "": ["5", "10", "15", "20", "25", "30"],
+                "HasElevator": ["True", "False"],
+                "NumClassrooms": ["5", "10", "15", "20"],
+                "HasPlayground": ["True", "False"],
+                "ProductionCapacity": ["Low", "Medium", "High"],
+                "": ["True", "False"],
+
+                
+                
             },
             "dependencies": {
-                # Modify this based on your generated city structure
+                damge
+                
             }
+}
+
         }
         with open("structure.json", "w") as f:
             json.dump(structure_data, f, indent=2)
