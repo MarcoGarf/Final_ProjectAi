@@ -1,6 +1,7 @@
 import random
+import json
 
-class CityGenerator:
+class CityGeneratorBaye:
     def __init__(self, size=10):
         self.size = size
         self.city = [['' for _ in range(size)] for _ in range(size)]
@@ -73,11 +74,64 @@ class CityGenerator:
                     'Has Smokestack': has_smokestack if object_type == 'Factory' else None
                 }
 
+        # Save the generated city to JSON files
+        self.save_to_json()
+
+    def save_to_json(self):
+        # Save city information to structure.json
+        structure_data = {
+            "variables": {
+                # Modify this based on your generated city structure
+            },
+            "dependencies": {
+                # Modify this based on your generated city structure
+            }
+        }
+        with open("structure.json", "w") as f:
+            json.dump(structure_data, f, indent=2)
+
+        # Save city information to values.json
+        values_data = {
+            "prior_probabilities": {
+                # Modify this based on your generated city structure
+            },
+            "conditional_probabilities": {
+                # Modify this based on your generated city structure
+            }
+        }
+        with open("values.json", "w") as f:
+            json.dump(values_data, f, indent=2)
+
+        # Save city information to queries.json
+        queries_data = [
+            {
+                "index": 1,
+                "given": {
+                    # Modify this based on your generated city structure
+                },
+                "tofind": {
+                    # Modify this based on your generated city structure
+                }
+            },
+            {
+                "index": 2,
+                "given": {
+                    # Modify this based on your generated city structure
+                },
+                "tofind": {
+                    # Modify this based on your generated city structure
+                }
+            }
+        ]
+        with open("queries.json", "w") as f:
+            json.dump(queries_data, f, indent=2)
+
     def display_city(self):
-            for row in self.city:
-                print(row)
+        for row in self.city:
+            print(row)
 
-
-
-    
-
+if __name__ == "__main__":
+    # Create an instance of the CityGenerator class
+    city_generator = CityGenerator(size=10)
+    city_generator.generate_city()
+    city_generator.display_city()
