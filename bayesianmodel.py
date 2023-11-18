@@ -2,7 +2,7 @@ import sys
 import json
 from itertools import product
 
-class Node():
+class Node(): 
 
     def __init__(self, name):
         self.parents = []
@@ -115,8 +115,7 @@ class BayesianNetwork(object):
             self.graph[var].set_is_prior(False)
             for p in parents:
                 self.graph[p].add_child(var)
-        print("here")
-        self.printGraph()
+        # self.printGraph()
 
     def infer(self):
         for i in self.queries:

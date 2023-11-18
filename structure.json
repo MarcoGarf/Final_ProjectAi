@@ -1,0 +1,155 @@
+{
+    "variables": { 
+        "BuildingType": [
+            "House",
+            "Mountain",
+            "Highway",
+            "Tall Building",
+            "School",
+            "Park",
+            "Factory"
+        ],
+        "Material": [
+            "Concrete",
+            "Wood",
+            "Brick"
+        ],
+        "GroundTypes": [
+            "Bendrock",
+            "Sediment",
+            "Saturated(Water)"
+        ],
+        "Stories": [
+            1,2,3,4,5
+        ],
+        "Area": [
+            "Downton",
+            "East",
+            "West"
+        ],
+        "Magnitude": [
+            "Low",
+            "Medium",
+            "High"
+        ],
+        "Depth": [
+            "Shallow",
+            "Intermediate",
+            "Deep"
+        ],
+        "DistanceFromEpicenter": [
+            "Close",
+            "Intermediate",
+            "Far"
+        ],
+        "BuildingAge": [
+            "Old",
+            "Moderate",
+            "New"
+        ],
+        "FoundationType": [
+            "Slab",
+            "Pile",
+            "Pier"
+        ],
+        "SoilLiquefaction": [
+            "Yes",
+            "No"
+        ],
+        "Retrofitting": [
+            "Yes",
+            "No"
+        ],
+        
+        "BuildingCodeAdherence": [
+            "High",
+            "Moderate",
+            "Low"
+        ],
+        "OccupancyType": [
+            "Residential",
+            "Commercial",
+            "Industrial"
+        ],
+        "RoofType": [
+            "Flat",
+            "Pitched"
+        ],
+        "WindowDoorType": [
+            "Reinforced",
+            "Non-Reinforced"
+        ],
+        "EmergencyResponseTime": [
+            "Fast",
+            "Moderate",
+            "Slow"
+        ],
+        "PopulationDensity": [
+            "Low",
+            "Medium",
+            "High"
+        ],
+        "PublicAwarenessPreparedness": [
+            "High",
+            "Moderate",
+            "Low"
+        ],
+        "EvacuationRoutes": [
+            "Well-Planned",
+            "Moderate",
+            "Poor"
+        ],
+        "EmergencyServicesInfrastructure": [
+            "Well-Equipped",
+            "Adequate",
+            "Inadequate"
+        ]
+
+    },
+    "dependencies": {
+        "GroundTypes": [
+            "BuildingType",
+            "FoundationType",
+            "SoilLiquefaction"
+        ],
+        "BuildingAge": [
+            "BuildingType",
+            "Material"
+        ],
+        "DistanceFromEpicenter": [
+            "Magnitude"
+        ],
+        "Retrofitting": [
+            "BuildingAge",
+            "BuildingType"
+        ],
+        "BuildingCodeAdherence": [
+            "Retrofitting",
+            "BuildingAge",
+            "BuildingType"
+        ],
+        "OccupancyType": [
+            "BuildingType",
+            "Stories"
+        ],
+        "RoofType": [
+            "BuildingType",
+            "Stories",
+            "Material"
+        ],
+        "WindowDoorType": [
+            "BuildingType",
+            "Material"
+        ],
+        "EmergencyResponseTime": [
+            "PublicAwarenessPreparedness"
+        ],
+        "EvacuationRoutes": [
+            "PublicAwarenessPreparedness"
+        ],
+        "EmergencyServicesInfrastructure": [
+            "EvacuationRoutes",
+            "EmergencyResponseTime"
+        ]
+    }
+}
