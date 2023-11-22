@@ -1,400 +1,158 @@
 {
     "prior_probabilities": {
-        "BuildingType": {
-            "House": 0.2,
-            "Mountain": 0.1,
-            "Highway": 0.05,
-            "Tall Building": 0.15,
-            "School": 0.1,
-            "Park": 0.15,
-            "Factory": 0.25
+        "Building_Collapse": {
+            "True": 0.1,
+            "False": 0.9
         },
-        "Material": {
-            "Concrete": 0.6,
-            "Wood": 0.2,
-            "Brick": 0.2
+        "Earthquake": {
+            "True": 0.2,
+            "False": 0.8
         },
-        "GroundTypes": {
-            "Bedrock": 0.3,
-            "Sediment": 0.5,
-            "Saturated(Water)": 0.2
+        "IsReinforce": {
+            "True": 0.4,
+            "False": 0.6
         },
-        "Stories": {
-            "1": 0.1,
-            "2": 0.2,
-            "3": 0.3,
-            "4": 0.2,
-            "5": 0.2
-        },
-        "Area": {
-            "Downtown": 0.4,
-            "East": 0.3,
-            "West": 0.3
-        },
-        "Magnitude": {
-            "Low": 0.3,
-            "Medium": 0.5,
-            "High": 0.2
-        },
-        "Depth": {
-            "Shallow": 0.4,
-            "Intermediate": 0.4,
-            "Deep": 0.2
-        },
-        "DistanceFromEpicenter": {
-            "Close": 0.3,
-            "Intermediate": 0.4,
-            "Far": 0.3
-        },
-        "BuildingAge": {
-            "Old": 0.3,
-            "Moderate": 0.5,
-            "New": 0.2
-        },
-        "FoundationType": {
-            "Slab": 0.4,
-            "Pile": 0.3,
-            "Pier": 0.3
-        },
-        "SoilLiquefaction": {
-            "Yes": 0.2,
-            "No": 0.8
-        },
-        "Retrofitting": {
-            "Yes": 0.4,
-            "No": 0.6
-        },
-        "BuildingCodeAdherence": {
-            "High": 0.4,
-            "Moderate": 0.3,
-            "Low": 0.3
-        },
-        "OccupancyType": {
-            "Residential": 0.4,
-            "Commercial": 0.3,
-            "Industrial": 0.3
-        },
-        "RoofType": {
-            "Flat": 0.4,
-            "Pitched": 0.6
-        },
-        "WindowDoorType": {
-            "Reinforced": 0.6,
-            "Non-Reinforced": 0.4
-        },
-        "EmergencyResponseTime": {
-            "Fast": 0.4,
-            "Moderate": 0.3,
-            "Slow": 0.3
-        },
-        "PopulationDensity": {
-            "Low": 0.3,
-            "Medium": 0.4,
-            "High": 0.3
-        },
-        "PublicAwarenessPreparedness": {
-            "High": 0.4,
-            "Moderate": 0.3,
-            "Low": 0.3
-        },
-        "EvacuationRoutes": {
-            "Well-Planned": 0.4,
-            "Moderate": 0.3,
-            "Poor": 0.3
-        },
-        "EmergencyServicesInfrastructure": {
-            "Well-Equipped": 0.4,
-            "Adequate": 0.3,
-            "Inadequate": 0.3
+        "IsOld": {
+            "True": 0.3,
+            "False": 0.7
         }
     },
     "conditional_probabilities": {
-        "Material": [
+        "Building_Collapse": [
             {
-                "BuildingType": "House",
-                "own_value": "Concrete",
-                "probability": true
+                "IsReinforce": "True",
+                "Earthquake": "True",
+                "IsOld": "True",
+                "own_value": "True",
+                "probability": 0.95
             },
             {
-                "BuildingType": "House",
-                "own_value": "Wood",
-                "probability": false
+                "IsReinforce": "True",
+                "Earthquake": "True",
+                "IsOld": "True",
+                "own_value": "False",
+                "probability": 0.05
             },
             {
-                "BuildingType": "House",
-                "own_value": "Brick",
-                "probability": false
-            }
-        ],
-        "GroundTypes": [
-            {
-                "BuildingType": "House",
-                "own_value": "Bedrock",
-                "probability": false
+                "IsReinforce": "True",
+                "Earthquake": "True",
+                "IsOld": "False",
+                "own_value": "True",
+                "probability": 0.8
             },
             {
-                "BuildingType": "House",
-                "own_value": "Sediment",
-                "probability": false
+                "IsReinforce": "True",
+                "Earthquake": "True",
+                "IsOld": "False",
+                "own_value": "False",
+                "probability": 0.2
             },
             {
-                "BuildingType": "House",
-                "own_value": "Saturated(Water)",
-                "probability": false
-            }
-        ],
-        "BuildingAge": [
-            {
-                "BuildingType": "House",
-                "own_value": "Old",
-                "probability": false
+                "IsReinforce": "True",
+                "Earthquake": "False",
+                "IsOld": "True",
+                "own_value": "True",
+                "probability": 0.7
             },
             {
-                "BuildingType": "House",
-                "own_value": "Moderate",
-                "probability": false
+                "IsReinforce": "True",
+                "Earthquake": "False",
+                "IsOld": "True",
+                "own_value": "False",
+                "probability": 0.3
             },
             {
-                "BuildingType": "House",
-                "own_value": "New",
-                "probability": false
+                "IsReinforce": "True",
+                "Earthquake": "False",
+                "IsOld": "False",
+                "own_value": "True",
+                "probability": 0.5
             },
             {
-                "BuildingType": "Tall Building",
-                "own_value": "Old",
-                "probability": false
+                "IsReinforce": "True",
+                "Earthquake": "False",
+                "IsOld": "False",
+                "own_value": "False",
+                "probability": 0.5
             },
             {
-                "BuildingType": "Tall Building",
-                "own_value": "Moderate",
-                "probability": false
+                "IsReinforce": "False",
+                "Earthquake": "True",
+                "IsOld": "True",
+                "own_value": "True",
+                "probability": 0.1
             },
             {
-                "BuildingType": "Tall Building",
-                "own_value": "New",
-                "probability": true
-            }
-        ],
-        "DistanceFromEpicenter": [
-            {
-                "Magnitude": "Low",
-                "own_value": "Close",
-                "probability":false
-            },
-            {
-                "Magnitude": "Low",
-                "own_value": "Intermediate",
-                "probability": true
-            },
-            {
-                "Magnitude": "Low",
-                "own_value": "Far",
-                "probability": false
-            },
-            {
-                "Magnitude": "Medium",
-                "own_value": "Close",
-                "probability": false
-            },
-            {
-                "Magnitude": "Medium",
-                "own_value": "Intermediate",
-                "probability": false
-            },
-            {
-                "Magnitude": "Medium",
-                "own_value": "Far",
-                "probability": false
-            },
-            {
-                "Magnitude": "High",
-                "own_value": "Close",
-                "probability": false
-            },
-            {
-                "Magnitude": "High",
-                "own_value": "Intermediate",
-                "probability": false
-            },
-            {
-                "Magnitude": "High",
-                "own_value": "Far",
-                "probability": false
-            }
-         ],
-         "Retrofitting": [
-         {
-            "BuildingAge": "New",
-            "BuildingType": "House",
-            "own_value": "Yes",
-            "probability": false
-        },
-        {
-            "BuildingAge": "New",
-            "BuildingType": "House",
-            "own_value": "No",
-            "probability": false
-        },
-        {
-            "BuildingAge": "Old",
-            "BuildingType": "Tall Building",
-            "own_value": "Yes",
-            "probability":false
-        },
-        {
-            "BuildingAge": "Old",
-            "BuildingType": "Tall Building",
-            "own_value": "No",
-            "probability": true
-        },
-        {
-            "BuildingAge": "Moderate",
-            "BuildingType": "Tall Building",
-            "own_value": "Yes",
-            "probability": false
-        },
-        {
-            "BuildingAge": "Moderate",
-            "BuildingType": "Tall Building",
-            "own_value": "No",
-            "probability": true
-        },
-        {
-            "BuildingAge": "New",
-            "BuildingType": "Tall Building",
-            "own_value": "Yes",
-            "probability": true
-        },
-        {
-            "BuildingAge": "New",
-            "BuildingType": "Tall Building",
-            "own_value": "No",
-            "probability": false
-        }
-        ],
-        "BuildingCodeAdherence": [
-            {
-                "Retrofitting": "Yes",
-                "BuildingAge": "Old",
-                "BuildingType": "House",
-                "own_value": "High",
-                "probability": true
-            }
-        ],
-        "OccupancyType": [
-            {
-                "BuildingType": "House",
-                "own_value": "Residential",
-                "probability": true
-            },
-            {
-                "BuildingType": "House",
-                "own_value": "Commercial",
-                "probability": false
-            }
-        ],
-        "RoofType": [
-            {
-                "BuildingType": "House",
-                "Stories": 1,
-                "Material": "Concrete",
-                "own_value": "Flat",
-                "probability": false
-            },
-            {
-                "BuildingType": "House",
-                "Stories": 1,
-                "Material": "Concrete",
-                "own_value": "Pitched",
-                "probability": true
-            }
-        ],
-        "WindowDoorType": [
-            {
-                "Material": "Concrete",
-                "own_value": "Reinforced",
-                "probability": true
-            },
-            {
-                "Material": "Concrete",
-                "own_value": "Non-Reinforced",
-                "probability": false
-            },
-            {
-                "Material": "Wood",
-                "own_value": "Reinforced",
-                "probability": false
-            }
-        ],
-        "EmergencyResponseTime": [
-            {
-                "DistanceFromEpicenter": "Close",
-                "PopulationDensity": "Low",
-                "own_value": "Fast",
+                "IsReinforce": "False",
+                "Earthquake": "True",
+                "IsOld": "True",
+                "own_value": "False",
                 "probability": 0.9
             },
             {
-                "DistanceFromEpicenter": "Close",
-                "PopulationDensity": "Medium",
-                "own_value": "Fast",
-                "probability": true
+                "IsReinforce": "False",
+                "Earthquake": "True",
+                "IsOld": "False",
+                "own_value": "True",
+                "probability": 0.3
             },
             {
-                "DistanceFromEpicenter": "Close",
-                "PopulationDensity": "High",
-                "own_value": "Fast",
-                "probability": true
+                "IsReinforce": "False",
+                "Earthquake": "True",
+                "IsOld": "False",
+                "own_value": "False",
+                "probability": 0.7
             },
             {
-                "DistanceFromEpicenter": "Intermediate",
-                "PopulationDensity": "Low",
-                "own_value": "Moderate",
-                "probability": true
+                "IsReinforce": "False",
+                "Earthquake": "False",
+                "IsOld": "True",
+                "own_value": "True",
+                "probability": 0.2
+            },
+            {
+                "IsReinforce": "False",
+                "Earthquake": "False",
+                "IsOld": "True",
+                "own_value": "False",
+                "probability": 0.8
+            },
+            {
+                "IsReinforce": "False",
+                "Earthquake": "False",
+                "IsOld": "False",
+                "own_value": "True",
+                "probability": 0.4
+            },
+            {
+                "IsReinforce": "False",
+                "Earthquake": "False",
+                "IsOld": "False",
+                "own_value": "False",
+                "probability": 0.6
             }
         ],
-        "EvacuationRoutes": [
+        "IsReinforce": [
             {
-                "PublicAwarenessPreparedness": "High",
-                "own_value": "Well-Planned",
-                "probability": true
+                "IsOld": "True",
+                "own_value": "True",
+                "probability": 0.8
             },
             {
-                "PublicAwarenessPreparedness": "High",
-                "own_value": "Moderate",
-                "probability": false
+                "IsOld": "True",
+                "own_value": "False",
+                "probability": 0.2
             },
             {
-                "PublicAwarenessPreparedness": "High",
-                "own_value": "Poor",
-                "probability": false
+                "IsOld": "False",
+                "own_value": "True",
+                "probability": 0.4
             },
             {
-                "PublicAwarenessPreparedness": "Moderate",
-                "own_value": "Well-Planned",
-                "probability": true
-            }
-        ],
-        "EmergencyServicesInfrastructure": [
-            {
-                "OccupancyType": "Residential",
-                "DistanceFromEpicenter": "Close",
-                "own_value": "Well-Equipped",
-                "probability": true
-            },
-            {
-                "OccupancyType": "Commercial",
-                "DistanceFromEpicenter": "Intermediate",
-                "own_value": "Adequate",
-                "probability": true
-            },
-            {
-                "OccupancyType": "Industrial",
-                "DistanceFromEpicenter": "Far",
-                "own_value": "Inadequate",
-                "probability": false
+                "IsOld": "False",
+                "own_value": "False",
+                "probability": 0.6
             }
         ]
-
-
     }
 }

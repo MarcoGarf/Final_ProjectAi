@@ -1,41 +1,25 @@
 [
     {
-        "index": 1,
-        "given": {
-            "EmergencyServicesInfrastructure": "Well-Equipped"
-        },
-        "tofind": {
-            "EvacuationRoutes": "Well-Planned"
-        }
+      "index": 1,
+      "given": {
+        "Building_Collapse": "True",
+        "IsReinforce": "True",
+        "Earthquake": "False",
+        "IsOld": "True"
+      },
+      "tofind": {
+        "Material": "True"
+      }
     },
     {
-        "index": 2,
-        "given": {
-            "BuildingType": "House",
-            "GroundTypes": "Sediment"
-        },
-        "tofind": {
-            "EmergencyServicesInfrastructure": "Inadequate"
-        }
-    },
-    {
-        "index": 3,
-        "given": {
-            "EvacuationRoutes": "Poor",
-            "DistanceFromEpicenter": "Close"
-        },
-        "tofind": {
-            "BuildingType": "House"
-        }
-    },
-    {
-        "index": 4,
-        "given": {
-            "BuildingCodeAdherence": "High",
-            "OccupancyType": "Residential"
-        },
-        "tofind": {
-            "RoofType": "Pitched"
-        }
+      "index": 2,
+      "given": {
+        "Building_Collapse": "False",
+        "IsOld": "False"
+      },
+      "tofind": {
+        "IsReinforce": "True"
+      }
     }
-]
+  ]
+  
