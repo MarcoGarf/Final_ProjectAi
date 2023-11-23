@@ -2,23 +2,24 @@
     {
       "index": 1,
       "given": {
-        "Building_Collapse": "True",
-        "IsReinforce": "True",
-        "Earthquake": "False",
+        
+        "IsReinforce": "False",
+        "Earthquake": "True",
         "IsOld": "True"
       },
       "tofind": {
-        "Material": "True"
+        "Building_Collapse": "True"
       }
     },
     {
       "index": 2,
       "given": {
-        "Building_Collapse": "False",
+        "IsReinforce": "True",
+        "Earthquake": "True",
         "IsOld": "False"
       },
       "tofind": {
-        "IsReinforce": "True"
+        "Building_Collapse": "False"
       }
     }
   ]

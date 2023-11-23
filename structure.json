@@ -3,10 +3,12 @@
          "Building_Collapse": ["True","False"],
          "Earthquake": ["True","False"],
          "IsReinforce": ["True","False"],
-         "IsOld": ["True","False"]
+         "IsOld": ["True","False"],
+         "ConcreteMade" : ["True","False"]
      },
     "dependencies": {
          "Building_Collapse": ["IsReinforce","Earthquake","IsOld"],
-         "IsReinforce": ["IsOld"]
+         "IsReinforce": ["IsOld"],
+         "ConcreteMade" : ["IsOld","IsReinforce"]
      }
  }

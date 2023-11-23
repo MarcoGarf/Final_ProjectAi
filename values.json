@@ -15,121 +15,125 @@
         "IsOld": {
             "True": 0.3,
             "False": 0.7
+        },
+        "ConcreteMade": {
+            "True": 0.1,
+            "False": 0.9
         }
     },
     "conditional_probabilities": {
         "Building_Collapse": [
             {
-                "IsReinforce": "True",
-                "Earthquake": "True",
-                "IsOld": "True",
-                "own_value": "True",
-                "probability": 0.95
-            },
-            {
-                "IsReinforce": "True",
-                "Earthquake": "True",
-                "IsOld": "True",
-                "own_value": "False",
-                "probability": 0.05
-            },
-            {
-                "IsReinforce": "True",
-                "Earthquake": "True",
-                "IsOld": "False",
-                "own_value": "True",
-                "probability": 0.8
-            },
-            {
-                "IsReinforce": "True",
-                "Earthquake": "True",
-                "IsOld": "False",
-                "own_value": "False",
-                "probability": 0.2
-            },
-            {
-                "IsReinforce": "True",
-                "Earthquake": "False",
-                "IsOld": "True",
-                "own_value": "True",
-                "probability": 0.7
-            },
-            {
-                "IsReinforce": "True",
-                "Earthquake": "False",
-                "IsOld": "True",
-                "own_value": "False",
-                "probability": 0.3
-            },
-            {
-                "IsReinforce": "True",
-                "Earthquake": "False",
-                "IsOld": "False",
-                "own_value": "True",
-                "probability": 0.5
-            },
-            {
-                "IsReinforce": "True",
-                "Earthquake": "False",
-                "IsOld": "False",
-                "own_value": "False",
-                "probability": 0.5
-            },
-            {
                 "IsReinforce": "False",
-                "Earthquake": "True",
-                "IsOld": "True",
-                "own_value": "True",
+                "Earthquake": "False",
+                "IsOld": "False",
+                "own_value": "False",
                 "probability": 0.1
             },
             {
                 "IsReinforce": "False",
-                "Earthquake": "True",
+                "Earthquake": "False",
+                "IsOld": "False",
+                "own_value": "True",
+                "probability": 0.15
+            },
+            {
+                "IsReinforce": "False",
+                "Earthquake": "False",
                 "IsOld": "True",
                 "own_value": "False",
-                "probability": 0.9
+                "probability": 0.20
+            },
+            {
+                "IsReinforce": "False",
+                "Earthquake": "False",
+                "IsOld": "True",
+                "own_value": "True",
+                "probability": 0.22
+            },
+            {
+                "IsReinforce": "False",
+                "Earthquake": "True",
+                "IsOld": "False",
+                "own_value": "False",
+                "probability": 0.80
             },
             {
                 "IsReinforce": "False",
                 "Earthquake": "True",
                 "IsOld": "False",
                 "own_value": "True",
+                "probability": 0.90
+            },
+            {
+                "IsReinforce": "False",
+                "Earthquake": "True",
+                "IsOld": "True",
+                "own_value": "False",
+                "probability": 0.95
+            },
+            {
+                "IsReinforce": "False",
+                "Earthquake": "True",
+                "IsOld": "True",
+                "own_value": "True",
+                "probability": 0.99
+            },
+            {
+                "IsReinforce": "True",
+                "Earthquake": "False",
+                "IsOld": "False",
+                "own_value": "False",
+                "probability": 0.30
+            },
+            {
+                "IsReinforce": "True",
+                "Earthquake": "False",
+                "IsOld": "False",
+                "own_value": "True",
+                "probability": 0.20
+            },
+            {
+                "IsReinforce": "True",
+                "Earthquake": "False",
+                "IsOld": "True",
+                "own_value": "False",
                 "probability": 0.3
             },
             {
-                "IsReinforce": "False",
-                "Earthquake": "True",
-                "IsOld": "False",
-                "own_value": "False",
-                "probability": 0.7
-            },
-            {
-                "IsReinforce": "False",
+                "IsReinforce": "True",
                 "Earthquake": "False",
                 "IsOld": "True",
-                "own_value": "True",
-                "probability": 0.2
-            },
-            {
-                "IsReinforce": "False",
-                "Earthquake": "False",
-                "IsOld": "True",
-                "own_value": "False",
-                "probability": 0.8
-            },
-            {
-                "IsReinforce": "False",
-                "Earthquake": "False",
-                "IsOld": "False",
                 "own_value": "True",
                 "probability": 0.4
             },
             {
-                "IsReinforce": "False",
-                "Earthquake": "False",
+                "IsReinforce": "True",
+                "Earthquake": "True",
                 "IsOld": "False",
                 "own_value": "False",
-                "probability": 0.6
+                "probability": 0.50
+            },
+            {
+                "IsReinforce": "True",
+                "Earthquake": "True",
+                "IsOld": "False",
+                "own_value": "True",
+                "probability": 0.65
+            },
+            {
+                "IsReinforce": "True",
+                "Earthquake": "True",
+                "IsOld": "True",
+                "own_value": "False",
+                "probability": 0.60
+            },
+            {
+                "IsReinforce": "True",
+                "Earthquake": "True",
+                "IsOld": "True",
+                "own_value": "True",
+                "probability": 0.65
             }
         ],
         "IsReinforce": [
@@ -152,6 +156,56 @@
                 "IsOld": "False",
                 "own_value": "False",
                 "probability": 0.6
+            }
+        ],
+        "ConcreteMade": [
+            {
+                "IsOld": "False",
+                "IsReinforce": "False",
+                "own_value": "False",
+                "probability": 0.6
+            },
+            {
+                "IsOld": "False",
+                "IsReinforce": "False",
+                "own_value": "True",
+                "probability": 0.7
+            },
+            {
+                "IsOld": "False",
+                "IsReinforce": "True",
+                "own_value": "False",
+                "probability": 0.8
+            },
+            {
+                "IsOld": "False",
+                "IsReinforce": "True",
+                "own_value": "True",
+                "probability": 0.9
+            },
+            {
+                "IsOld": "True",
+                "IsReinforce": "False",
+                "own_value": "False",
+                "probability": 0.1
+            },
+            {
+                "IsOld": "True",
+                "IsReinforce": "False",
+                "own_value": "True",
+                "probability": 0.2
+            },
+            {
+                "IsOld": "True",
+                "IsReinforce": "True",
+                "own_value": "False",
+                "probability": 0.01
+            },
+            {
+                "IsOld": "True",
+                "IsReinforce": "True",
+                "own_value": "True",
+                "probability": 0.3
             }
         ]
     }
